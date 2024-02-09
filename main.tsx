@@ -51,7 +51,10 @@ const Layout = (props: Props) =>
         }
         section {
           margin: auto;
-          padding: 80px;
+          padding-top: 80px;
+          padding-bottom: 80px;
+          padding-left: 20px;
+          padding-right: 20px;
           max-width: 600px;
         }
         input {
