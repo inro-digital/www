@@ -81,23 +81,27 @@ app.get("/", (c) => {
         <img class="title" src="public/inro-title.png" />
       </div>
       <section>
-        <h1>When you need to remember something, where do you go?</h1>
-        <p>The website your friend told you about?</p>
-        <p>The name of that person you met at the gym?</p>
-        <p>The lockbox code to get into your AirBnb?</p>
+        <h1>Remembering things is hard</h1>
+        <p>The restaurant your friend told you about</p>
+        <p>The name of that person you met at the gym</p>
+        <p>The lockbox code to get into your AirBnb</p>
+        <h1>When you need to remember something, where do you turn?</h1>
         <p>
           Do you write it in your knowledge-base? Your perfectly organized
-          system, cross-refenced by tags? Or do you quickly jot it down on the
-          first page of your notes app? You know the one: a mix of numbers,
-          codes, names, and dates. Do you remember what they were for? Do you
-          remember when you even wrote them?
+          system, sorted into folders, and cross-refenced by tags?
         </p>
+        <p>
+          Or do you quickly jot it down on the first page of your notes app?
+          You know the one: a mix of numbers, codes, names, and dates.
+        </p>
+        <p>Do you remember what they were for?</p>
+        <p>Do you even remember when you wrote them?</p>
         <h1>Inro is the first page of your notes app, reinvented</h1>
         <p>
-          Inro is made to handle all your haphazardly thrown little bits and
-          pieces of notes, and help you find that information later. It's like
-          texting yourself, while having access to all the powerful features you
-          would expect in a notes app, like tags, content-search, and filtering.
+          Inro is made to handle all your haphazardly thrown bits and pieces of
+          notes, and help you recall that information later. You can think of
+          it like texting yourself, but with all the powerful features you'd
+          expect in a notes app: things like tags, content-search, and filtering.
         </p>
       </section>
       <footer class="notify">
