@@ -36,6 +36,7 @@ const Layout = (props: Props) =>
         .title-banner {
           text-align: center;
           background-image: url("public/texture-1.png");
+          background-color: rgb(113, 129, 125);
           width: 100%;
           margin: 0;
           padding-top: 200px;
@@ -54,7 +55,7 @@ const Layout = (props: Props) =>
           padding-top: 80px;
           padding-bottom: 80px;
           padding-left: 20px;
-          padding-right: 20px;
+          padding-right: 0px;
           max-width: 600px;
         }
         input {
@@ -68,6 +69,7 @@ const Layout = (props: Props) =>
           padding-top: 150px;
           padding-bottom: 150px;
           background-image: url("public/texture-4.png");
+          background-color: rgb(220, 175, 175);
           background-size: 13%;
         }
       </style>
