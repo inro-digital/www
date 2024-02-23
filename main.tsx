@@ -25,12 +25,21 @@ const Layout = (props: Props) =>
       <title>${props.title}</title>
       <link rel="icon" href="public/favicon.png">
       <style>
+        @font-face {
+          font-family: sn-pro;
+          src: url(public/fonts/sn-pro/SNPro-Regular.woff2);
+          font-weight: normal;
+        }
+        @font-face {
+          font-family: sn-pro;
+          src: url(public/fonts/sn-pro/SNPro-Bold.woff2);
+          font-weight: bold;
+        }
         body {
-          font-family: monospace;
+          font-family: sn-pro, sans;
           margin: 0;
           background: beige;
-          font-size: 1.2rem;
-          line-height: 1.8rem;
+          font-size: 20px;
           body: 100%;
         }
         .title-banner {
@@ -47,30 +56,43 @@ const Layout = (props: Props) =>
           max-width: 400px;
         }
         section h1 {
+          font-family: monospace;
           padding-top: 20px;
-          padding-bottom: 20px;
+          word-spacing: -0.2em;
         }
         section {
-          margin: auto;
-          padding-top: 80px;
-          padding-bottom: 80px;
+          margin: 0 auto 0 auto;
+          padding-top: 40px;
+          padding-bottom: 40px;
           padding-left: 20px;
           padding-right: 0px;
           max-width: 600px;
+        }
+        section p {
+          line-height: 1.5;
+        }
+        h4 {
+          text-decoration: underline solid gray;
+          margin-bottom: 0;
         }
         input {
           margin: 10px;
         }
         .notify {
-          width: 100%;
           margin: 0;
           margin-top: 100px;
           text-align: center;
-          padding-top: 150px;
-          padding-bottom: 150px;
+          padding: 150px 10px 150px 10px;
           background-image: url("public/texture-4.png");
           background-color: rgb(220, 175, 175);
           background-size: 13%;
+        }
+        .tags {
+          font-size: 0.8em;
+          background-color: rgba(48, 43, 59, 0.9);
+          color: rgba(256, 256, 256, 0.95);
+          border-radius: 6px;
+          padding: 3px;
         }
       </style>
     </head>
@@ -87,30 +109,37 @@ app.get("/", (c) => {
       </div>
       <section>
         <h1>Remembering things is hard</h1>
-        <p>The restaurant your friend told you about</p>
-        <p>The name of that person you met at the gym</p>
-        <p>The lockbox code to get into your AirBnb</p>
-        <h1>When you need to remember something, where do you turn?</h1>
+        <p>The restaurant your friend recommended...</p>
+        <p>The name of that friendly person from the gym...</p>
+        <p>The lockbox code to get into your AirBnb...</p>
+        <h1>How do you remember?</h1>
         <p>
-          Do you write it in your knowledge-base? Your perfectly organized
-          system, sorted into folders, and cross-refenced by tags?
+          <h4>Do file it into your notes app?</h4>
         </p>
         <p>
-          Or do you quickly jot it down on the first page of your notes app?
-          You know the one: a mix of numbers, codes, names, and dates.
+          Do you actually take the time, and file that restaurant recommendation
+          into your curated knowledge-base? Or......
         </p>
-        <p>Do you remember what they were for?</p>
-        <p>Do you even remember when you wrote them?</p>
+        <p>
+          <h4>Do you use exactly 1 page of your notes app?</h4>
+        </p>
+        <p>
+          You know. <strong>THAT</strong>{" "}
+          page. That first page that pops up. That page filled with of numbers,
+          codes, names, and dates. Do you remember why you wrote those numbers?
+          Do you even remember writing them at all?
+        </p>
         <h1>Inro is the first page of your notes app, reinvented</h1>
         <p>
-          Inro is made to handle all your haphazardly thrown bits and pieces of
-          notes, and help you recall that information later. You can think of
-          it like texting yourself, but with all the powerful features you'd
-          expect in a notes app: things like tags, content-search, and filtering.
+          Inro is made to handle all those haphazardly thrown bits and pieces of
+          notes, and help you recall that information later. Think of it like
+          texting yourself, but with all the powerful features you'd expect in a
+          modern notes app:{" "}
+          <span class="tags">#tags</span>, content-search, and filtering.
         </p>
       </section>
       <footer class="notify">
-        <h2>Inro is currently in development.</h2>
+        <h2>Inro is in development.</h2>
         <h3>Be notified when it's available!</h3>
 
         <form
@@ -122,7 +151,7 @@ app.get("/", (c) => {
         >
           <label for="bd-email">Enter your email</label>
           <input type="email" name="email" id="bd-email" />
-          <input type="submit" value="Done!" />
+          <input type="submit" value="submit" />
         </form>
       </footer>
     </Layout>,
