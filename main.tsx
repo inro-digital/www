@@ -125,7 +125,7 @@ app.get("/", (c) => {
         </p>
         <p>
           You know. <strong>THAT</strong>{" "}
-          page. That first page that pops up. That page filled with of numbers,
+          page. That first page that pops up. That page filled with numbers,
           codes, names, and dates. Do you remember why you wrote those numbers?
           Do you even remember writing them at all?
         </p>
@@ -134,7 +134,7 @@ app.get("/", (c) => {
           Inro is made to handle all those haphazardly thrown bits and pieces of
           notes, and help you recall that information later. Think of it like
           texting yourself, but with all the powerful features you'd expect in a
-          modern notes app:{" "}
+          modern notes app, helping you find that information later:{" "}
           <span class="tags">#tags</span>, content-search, and filtering.
         </p>
       </section>
